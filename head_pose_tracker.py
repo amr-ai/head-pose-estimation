@@ -7,7 +7,7 @@ import os
 from ultralytics import YOLO
 
 class HeadPoseTracker:
-    def __init__(self, video_source="55.mp4"):
+    def __init__(self, video_source="0"): #put your video path here
         self.cap = cv2.VideoCapture(video_source)
         self.model = YOLO('yolov8n-pose.pt')
         self.tracker = Sort(max_age=10, min_hits=2, iou_threshold=0.3)
